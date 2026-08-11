@@ -2,6 +2,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Inter', sans-serif;
+    src: local("Inter"), url("Fonts/Inter-Medium.ttf") format("ttf");
+    font-weight: normal;
 }
 
 .notification-panel {
@@ -53,8 +56,18 @@
     max-width: fit-content;
 }
 
+.btn-default {
+    background-color: #F5F5F5;
+    background-image: none;
+}
+
+.btn__img {
+    margin-left: 10px;
+}
+
 .status--red {
     background-color: #F97316;
+    color: #fff;
 }
 
 .status--orange {

@@ -29,12 +29,14 @@
     </div>
     <div class="notification-panel col-md-11">
         <div class="notification-panel__header row row-flex">
-            <h4 class="col-md-2">Панель уведомлений</h4>
-            <p class="col-md-2 no-mb">18 непрочитанных уведомлений</p>
+            <div class="notification-panel__title col-md-4 row row-flex">
+                <h4>Панель уведомлений</h4>
+                <p class="no-mb">18 непрочитанных уведомлений</p>
+            </div>
             <div class="buttons col-md-5">
                 <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/show.svg" alt="глаз"> Прочитать все</button>
-                <button class="btn btn-default btn-xl" type="button" role="button">Показать <span>↘</span></button>
-                <button class="btn btn-default btn-xl" type="button" role="button">Источник <span>↘</span></button>
+                <button class="btn btn-default btn-xl" type="button" role="button">Показать <img class="btn__img" src="img/arrow.svg" alt=""></button>
+                <button class="btn btn-default btn-xl" type="button" role="button">Источник <img class="btn__img" src="img/arrow.svg" alt=""></button>
             </div>
             <p class="col-md-3 no-mb ta-right">Сегодня: четверг, 23 июля 2026</p>
         </div>
@@ -44,12 +46,12 @@
                     <div class="notification__title col-md-6">
                         <div class="row row-flex">
                             <h4>Пропущенный звонок</h4>
-                            <p class="no-mb status status--red">Высокий</p>
+                            <p class="no-mb status status--red">Срочно</p>
                         </div>
                     </div>
                     <div class="notification__buttons col-md-6">
                         <div class="row row-flex jc-end">
-                            <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/show.svg" alt="глаз"> Позвонить</button>
+                            <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/phone.svg" alt="телефон"> Позвонить</button>
                             <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/max.svg" alt="макс"> Написать в МАХ</button>
                             <img src="img/photo.svg" alt="фото" class="ml-10">
                             <img src="img/no-show.svg" alt="просмотр" class="ml-10">
@@ -71,7 +73,7 @@
                     </div>
                     <div class="notification__buttons col-md-6">
                         <div class="row row-flex jc-end">
-                            <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/show.svg" alt="глаз"> Позвонить</button>
+                            <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/phone.svg" alt="телефон"> Позвонить</button>
                             <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/max.svg" alt="макс"> Написать в МАХ</button>
                             <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/check.svg" alt="галочка"> Взять себе</button>
                             <img src="img/photo.svg" alt="фото" class="ml-10">
@@ -89,13 +91,13 @@
                     <div class="notification__title col-md-6">
                         <div class="row row-flex">
                             <h4>Пропущенный звонок</h4>
-                            <p class="no-mb status status--red">Высокий</p>
+                            <p class="no-mb status status--orange">Высокий</p>
                             <p class="no-mb"><img src="img/clock.svg" alt="часы"> 15:32</p>
                         </div>
                     </div>
                     <div class="notification__buttons col-md-6">
                         <div class="row row-flex jc-end">
-                            <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/show.svg" alt="глаз"> Позвонить</button>
+                            <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/phone.svg" alt="телефон"> Позвонить</button>
                             <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/max.svg" alt="макс"> Написать в МАХ</button>
                             <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/check.svg" alt="галочка"> Взять себе</button>
                             <img src="img/photo.svg" alt="фото" class="ml-10">
@@ -113,13 +115,13 @@
                     <div class="notification__title col-md-6">
                         <div class="row row-flex">
                             <h4>Пропущенный звонок</h4>
-                            <p class="no-mb status status--red">Высокий</p>
+                            <p class="no-mb status status--red">Срочно</p>
                             <p class="no-mb"><img src="img/clock.svg" alt="часы"> 15:32</p>
                         </div>
                     </div>
                     <div class="notification__buttons col-md-6">
                         <div class="row row-flex jc-end">
-                            <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/show.svg" alt="глаз"> Позвонить</button>
+                            <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/phone.svg" alt="телефон"> Позвонить</button>
                             <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/max.svg" alt="макс"> Написать в МАХ</button>
                             <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/check.svg" alt="галочка"> Взять себе</button>
                             <img src="img/photo.svg" alt="фото" class="ml-10">
@@ -137,12 +139,12 @@
                     <div class="notification__title col-md-6">
                         <div class="row row-flex">
                             <h4>Пропущенный звонок</h4>
-                            <p class="no-mb status status--red">Высокий</p>
+                            <p class="no-mb status status--red">Срочно</p>
                         </div>
                     </div>
                     <div class="notification__buttons col-md-6">
                         <div class="row row-flex jc-end">
-                            <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/show.svg" alt="глаз"> Позвонить</button>
+                            <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/phone.svg" alt="телефон"> Позвонить</button>
                             <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/max.svg" alt="макс"> Написать в МАХ</button>
                             <img src="img/photo.svg" alt="фото" class="ml-10">
                             <img src="img/no-show.svg" alt="просмотр" class="ml-10">
@@ -164,7 +166,7 @@
                     </div>
                     <div class="notification__buttons col-md-6">
                         <div class="row row-flex jc-end">
-                            <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/show.svg" alt="глаз"> Позвонить</button>
+                            <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/phone.svg" alt="телефон"> Позвонить</button>
                             <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/max.svg" alt="макс"> Написать в МАХ</button>
                             <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/check.svg" alt="галочка"> Взять себе</button>
                             <img src="img/photo.svg" alt="фото" class="ml-10">
@@ -182,13 +184,13 @@
                     <div class="notification__title col-md-6">
                         <div class="row row-flex">
                             <h4>Пропущенный звонок</h4>
-                            <p class="no-mb status status--red">Высокий</p>
+                            <p class="no-mb status status--orange">Высокий</p>
                             <p class="no-mb"><img src="img/clock.svg" alt="часы"> 15:32</p>
                         </div>
                     </div>
                     <div class="notification__buttons col-md-6">
                         <div class="row row-flex jc-end">
-                            <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/show.svg" alt="глаз"> Позвонить</button>
+                            <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/phone.svg" alt="телефон"> Позвонить</button>
                             <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/max.svg" alt="макс"> Написать в МАХ</button>
                             <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/check.svg" alt="галочка"> Взять себе</button>
                             <img src="img/photo.svg" alt="фото" class="ml-10">
@@ -206,13 +208,13 @@
                     <div class="notification__title col-md-6">
                         <div class="row row-flex">
                             <h4>Пропущенный звонок</h4>
-                            <p class="no-mb status status--red">Высокий</p>
+                            <p class="no-mb status status--red">Срочно</p>
                             <p class="no-mb"><img src="img/clock.svg" alt="часы"> 15:32</p>
                         </div>
                     </div>
                     <div class="notification__buttons col-md-6">
                         <div class="row row-flex jc-end">
-                            <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/show.svg" alt="глаз"> Позвонить</button>
+                            <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/phone.svg" alt="телефон"> Позвонить</button>
                             <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/max.svg" alt="макс"> Написать в МАХ</button>
                             <button class="btn btn-default btn-xl" type="button" role="button"><img src="img/check.svg" alt="галочка"> Взять себе</button>
                             <img src="img/photo.svg" alt="фото" class="ml-10">
