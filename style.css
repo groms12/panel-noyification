@@ -106,7 +106,8 @@
     position: relative;
 }
 
-.notification::before {
+.notification::before,
+.call::before {
     content: '';
     display: block;
     position: absolute;
@@ -119,19 +120,31 @@
     border-bottom-left-radius: 100px;
 }
 
-.notification--red::before {
+.notification--red::before,
+.call--red::before,
+.call__circle--red,
+.call__status--red {
     background-color: #F97316;
 }
 
-.notification--orange::before {
+.notification--orange::before,
+.call--orange::before,
+.call__circle--orange,
+.call__status--orange {
     background-color: #FFDBAB;
 }
 
-.notification--gray::before {
+.notification--gray::before,
+.call--gray::before,
+.call__circle--gray,
+.call__status--gray {
     background-color: #D6D6D6;
 }
 
-.notification--light-gray::before {
+.notification--light-gray::before,
+.call--light-gray::before,
+.call__circle--light-gray,
+.call__status--light-gray {
     background-color: #EFEFEF;
 }
 
@@ -141,4 +154,241 @@
 
 .notification__info {
     margin-bottom: 16px;
+}
+
+
+/* стили для воронки клиентов */
+
+.red-notificate {
+    color: #f97316;
+}
+
+.sales-funnel__header {
+    margin-left: 0;
+}
+
+.btn--orange {
+    background-color: #ffefd7;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #dbdbdb;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.sales-funnel__content {
+    height: 94vh;
+    overflow: scroll;
+}
+
+.btn--number {
+    padding: 2px 4px;
+    background-color: #f97316;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 11px;
+    margin-left: 8px;
+}
+
+.sales-funnel__header button>img {
+    height: 18px;
+    margin-right: 8px;
+}
+
+.btn {
+    border: none;
+}
+
+.sales-funnel__search {
+    position: relative;
+}
+
+.sales-funnel__search img {
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 18px;
+}
+
+.sales-funnel__search input {
+    text-indent: 32px;
+    min-width: 250px;
+    height: 32px;
+}
+
+.sales-funnel__items {
+    margin-top: 16px;
+    height: 80vh;
+    width: 95vw;
+    overflow: scroll;
+    align-items: stretch;
+}
+
+.sales-funnel__item {
+    height: 100%;
+}
+
+.sales-column {
+    min-width: 258px;
+    max-width: 258px;
+    border-right: 1px solid #333333;
+    display: flex;
+    flex-direction: column;
+}
+
+.sales-column--light-gray {
+    background-color: #FAFBFB;
+}
+
+.sales-column--gray {
+    background-color: #F6F8FA;
+}
+
+.sales-column--light-yellow {
+    background-color: #FDFFE9;
+}
+
+.sales-column--yellow {
+    background-color: #FCFFD2;
+}
+
+.sales-column--light-green {
+    background-color: #F7F9C4;
+}
+
+.sales-column--green {
+    background-color: #F0F6BC;
+}
+
+.sales-column--dark-green {
+    background-color: #E0EFAB;
+}
+
+.sales-column--light-orange {
+    background-color: #FFEFD7;
+}
+
+.sales-column--orange {
+    background-color: #FFE5C2;
+}
+
+.sales-column__header {
+    padding: 10px;
+    background-color: #FAFBFB;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #858585;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.sales-column__images {
+    grid-gap: 6px;
+}
+
+.sales-column__images img {
+    height: 18px;
+}
+
+.sales-column__count {
+    padding: 4px 6px;
+    background-color: #FFDBAB;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.sales-column__title {
+    font-size: 16px;
+    line-height: 29px;
+}
+
+.sales-column__content {
+    padding: 10px;
+    flex: 1 1 auto;
+    min-height: 60px;
+}
+
+.call {
+    position: relative;
+    padding: 8px;
+    padding-left: 16px;
+    background-color: #fff;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+
+.call__circle {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+}
+
+.call__status {
+    padding: 6px 12px;
+    border-radius: 8px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.call__city,
+.call__response {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.call__block {
+    margin-bottom: 12px;
+}
+
+.call__block span {
+    display: block;
+}
+
+.call__comment {
+    font-size: 10px;
+}
+
+.call__block:last-child {
+    margin-bottom: 0;
+}
+
+.call__name {
+    font-size: 16px;
+}
+
+.call--draggable {
+    cursor: grab;
+}
+
+.call--dragging {
+    opacity: 0.4;
+    cursor: grabbing;
+}
+
+.sales-column {
+    transition: opacity 0.15s ease;
+}
+
+.sales-column--dragging-from {
+    opacity: 0.45;
+}
+
+.sales-column__placeholder {
+    box-sizing: border-box;
+    border: 2px dashed #f97316;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    background-color: rgba(249, 115, 22, 0.08);
 }

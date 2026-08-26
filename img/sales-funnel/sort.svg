@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_2" data-name="Слой_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.55 18.93">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #333;
+        font-family: Inter-Regular, Inter;
+        font-size: 16px;
+        font-variation-settings: 'wght' 400, 'slnt' 0;
+      }
+    </style>
+  </defs>
+  <g id="_Слой_1-2" data-name="Слой_1">
+    <text class="cls-1" transform="translate(0 13.82)"><tspan x="0" y="0">↑↓</tspan></text>
+  </g>
+</svg>

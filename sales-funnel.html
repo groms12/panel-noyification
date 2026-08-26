@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Воронка клиентов</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="menu col-md-1">
+        <!-- <div class="menu__content"> -->
+        <div class="menu__up">
+            <div class="menu__open">
+
+            </div>
+            <div class="menu__icons"><img src="img/menu/Home.svg" alt=""><img src="img/menu/Switch vertical.svg" alt=""></div>
+        </div>
+        <div class="menu__bottom">
+            <div class="menu__icons"><img src="img/menu/Home.svg" alt=""><img src="img/menu/Switch vertical.svg" alt=""></div>
+        </div>
+        <!-- </div> -->
+    </div>
+    <div class="notification-panel col-md-11 sales-funnel">
+        <div class="notification-panel__header row row-flex">
+            <div class="notification-panel__title col-md-6 row row-flex">
+                <h4>Воронка клиентов</h4>
+                <p class="no-mb">18 непрочитанных уведомлений</p>
+                <p class="no-mb red-notificate">15 требуют внимания</p>
+            </div>
+            <p class="col-md-6 no-mb ta-right">Сегодня: пятница, 14.08. 2026 13:00</p>
+        </div>
+        <div class="sales-funnel__header row row-flex">
+            <button class="btn btn-default btn-xl col-md-1" type="button" role="button">Все</button>
+            <button class="btn btn-default btn-xl col-md-1" type="button" role="button">Только мои</button>
+            <button class="btn btn-default btn-xl col-md-1" type="button" role="button">Мой офис</button>
+            <button class="btn btn-default btn-xl col-md-1" type="button" role="button">Мой город</button>
+            <button class="btn btn-default btn-xl col-md-1" type="button" role="button">РФО</button>
+            <button class="btn btn-default btn-xl col-md-1 btn--orange" type="button" role="button">Дивизион</button>
+        </div>
+        <div class="line"></div>
+        <div class="sales-funnel__content">
+            <div class="sales-funnel__header row row-flex">
+                <div class="row row-flex col-md-6">
+                    <div class="sales-funnel__search">
+                        <img src="img/sales-funnel/search.svg" alt="Поиск">
+                        <input type="text" placeholder="Имя, телефон, город...">
+                    </div>
+                    <button class="btn btn-default btn-xl status--orange" type="button" role="button"><img src="img/sales-funnel/fire.svg" alt="fire"> Только горящие <span class="btn--number">11</span></button>
+                    <button class="btn btn-default btn-xl " type="button" role="button"><img src="img/sales-funnel/people.svg" alt="people"> Все ответственные <img class="btn__img" src="img/arrow.svg" alt=""></button>
+                </div>
+                <div class="row row-flex col-md-6">
+                    <button class="btn btn-default btn-xl " type="button" role="button"><img src="img/sales-funnel/new-task.svg" alt="new-task"> Создать задачу</button>
+                    <button class="btn btn-default btn-xl " type="button" role="button"><img src="img/sales-funnel/add-task.svg" alt="add-task"> Добавить посетителя</button>
+                </div>
+            </div>
+            <div class="sales-funnel__items row row-flex">
+                <div class="sales-funnel__item sales-column sales-column--light-gray">
+                    <div class="sales-column__header">
+                        <div class="sales-column__images row row-flex">
+                            <span class="sales-column__count">130</span>
+                            <img src="img/sales-funnel/sort.svg" alt="Сортировать">
+                        </div>
+                        <span class="sales-column__title">Лиды: <br>
+                            неразобранные</span>
+                    </div>
+                    <div class="sales-column__content">
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sales-funnel__item sales-column sales-column--gray">
+                    <div class="sales-column__header">
+                        <div class="sales-column__images row row-flex">
+                            <span class="sales-column__count">3</span>
+                            <img src="img/sales-funnel/sort.svg" alt="Сортировать">
+                        </div>
+                        <span class="sales-column__title">Лиды:  <br>
+                            в работе (дозвон)</span>
+                    </div>
+                    <div class="sales-column__content ">
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sales-funnel__item sales-column sales-column--light-yellow">
+                    <div class="sales-column__header">
+                        <div class="sales-column__images row row-flex">
+                            <span class="sales-column__count">4</span>
+                            <img src="img/sales-funnel/sort.svg" alt="Сортировать">
+                        </div>
+                        <span class="sales-column__title">Потенциальные: <br>
+                            неразобранные</span>
+                    </div>
+                    <div class="sales-column__content">
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sales-funnel__item sales-column sales-column--yellow">
+                    <div class="sales-column__header">
+                        <div class="sales-column__images row row-flex">
+                            <span class="sales-column__count">17</span>
+                            <img src="img/sales-funnel/sort.svg" alt="Сортировать">
+                        </div>
+                        <span class="sales-column__title">
+                            Потенциальные: <br>
+в работе (дозвон)
+                        </span>
+                    </div>
+                    <div class="sales-column__content">
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sales-funnel__item sales-column sales-column--light-green">
+                    <div class="sales-column__header">
+                        <div class="sales-column__images row row-flex">
+                            <span class="sales-column__count">3</span>
+                            <img src="img/sales-funnel/sort.svg" alt="Сортировать">
+                        </div>
+                        <span class="sales-column__title">Потенциальные: <br>
+                            встреча назначена</span>
+                    </div>
+                    <div class="sales-column__content">
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sales-funnel__item sales-column sales-column--green">
+                    <div class="sales-column__header">
+                        <div class="sales-column__images row row-flex">
+                            <span class="sales-column__count">2</span>
+                            <img src="img/sales-funnel/sort.svg" alt="Сортировать">
+                        </div>
+                        <span class="sales-column__title">Потенциальные: <br>
+                            был в офисе</span>
+                    </div>
+                    <div class="sales-column__content">
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sales-funnel__item sales-column sales-column--dark-green">
+                    <div class="sales-column__header">
+                        <div class="sales-column__images row row-flex">
+                            <span class="sales-column__count">2</span>
+                            <img src="img/sales-funnel/sort.svg" alt="Сортировать">
+                        </div>
+                        <span class="sales-column__title">Потенциальные: <br>
+                            онлайн-заказ</span>
+                    </div>
+                    <div class="sales-column__content">
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sales-funnel__item sales-column sales-column--light-orange">
+                    <div class="sales-column__header">
+                        <div class="sales-column__images row row-flex">
+                            <span class="sales-column__count">3</span>
+                            <img src="img/sales-funnel/sort.svg" alt="Сортировать">
+                        </div>
+                        <span class="sales-column__title">Потенциальные: <br>
+                            отложенные</span>
+                    </div>
+                    <div class="sales-column__content">
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sales-funnel__item sales-column sales-column--orange">
+                    <div class="sales-column__header">
+                        <div class="sales-column__images row row-flex">
+                            <span class="sales-column__count">5</span>
+                            <img src="img/sales-funnel/sort.svg" alt="Сортировать">
+                        </div>
+                        <span class="sales-column__title">Потенциальные: <br>
+                            отложенные более 14 дн.</span>
+                    </div>
+                    <div class="sales-column__content ">
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--light-gray">Новый</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script>
+        (function () {
+            var columns = Array.prototype.slice.call(document.querySelectorAll('.sales-funnel__item.sales-column'));
+            columns.forEach(function (column, index) {
+                column.dataset.columnIndex = index;
+            });
+
+            var placeholder = document.createElement('div');
+            placeholder.className = 'sales-column__placeholder';
+
+            var draggedCard = null;
+            var draggedFromIndex = -1;
+            var sourceColumn = null;
+
+            function updateColumnCount(column) {
+                var countEl = column.querySelector('.sales-column__count');
+                var content = column.querySelector('.sales-column__content');
+                if (countEl && content) {
+                    countEl.textContent = content.querySelectorAll('.sales-column__call').length;
+                }
+            }
+
+            function getInsertionReference(content, y) {
+                var cards = content.querySelectorAll('.sales-column__call');
+                for (var i = 0; i < cards.length; i++) {
+                    var rect = cards[i].getBoundingClientRect();
+                    if (y < rect.top + rect.height / 2) {
+                        return cards[i];
+                    }
+                }
+                return null;
+            }
+
+            function cleanupDrag() {
+                if (placeholder.parentNode) {
+                    placeholder.parentNode.removeChild(placeholder);
+                }
+                if (sourceColumn) {
+                    sourceColumn.classList.remove('sales-column--dragging-from');
+                }
+                draggedCard = null;
+                draggedFromIndex = -1;
+                sourceColumn = null;
+            }
+
+            document.querySelectorAll('.sales-column__call.call.call--red').forEach(function (card) {
+                card.classList.add('call--draggable');
+                card.setAttribute('draggable', 'true');
+
+                card.addEventListener('dragstart', function (e) {
+                    var column = card.closest('.sales-funnel__item.sales-column');
+                    draggedCard = card;
+                    draggedFromIndex = column ? Number(column.dataset.columnIndex) : -1;
+                    sourceColumn = column;
+                    placeholder.style.height = card.offsetHeight + 'px';
+                    card.classList.add('call--dragging');
+                    if (column) column.classList.add('sales-column--dragging-from');
+                    if (e.dataTransfer) {
+                        e.dataTransfer.effectAllowed = 'move';
+                        e.dataTransfer.setData('text/plain', '');
+                    }
+                });
+
+                card.addEventListener('dragend', function () {
+                    card.classList.remove('call--dragging');
+                    cleanupDrag();
+                });
+            });
+
+            columns.forEach(function (column, index) {
+                var content = column.querySelector('.sales-column__content');
+                if (!content) return;
+
+                content.addEventListener('dragover', function (e) {
+                    if (!draggedCard || index <= draggedFromIndex) return;
+                    e.preventDefault();
+                    e.dataTransfer.dropEffect = 'move';
+                    var ref = getInsertionReference(content, e.clientY);
+                    if (ref) {
+                        content.insertBefore(placeholder, ref);
+                    } else {
+                        content.appendChild(placeholder);
+                    }
+                });
+
+                content.addEventListener('drop', function (e) {
+                    if (!draggedCard || index <= draggedFromIndex) return;
+                    e.preventDefault();
+                    var fromColumn = sourceColumn;
+                    content.insertBefore(draggedCard, placeholder);
+                    if (placeholder.parentNode) {
+                        placeholder.parentNode.removeChild(placeholder);
+                    }
+                    if (fromColumn) updateColumnCount(fromColumn);
+                    updateColumnCount(column);
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>
