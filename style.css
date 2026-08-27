@@ -231,6 +231,7 @@
     width: 95vw;
     overflow: scroll;
     align-items: stretch;
+    grid-gap: 8px;
 }
 
 .sales-funnel__item {
