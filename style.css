@@ -127,6 +127,10 @@
     background-color: #F97316;
 }
 
+.call__status--red {
+    color: #fff;
+}
+
 .notification--orange::before,
 .call--orange::before,
 .call__circle--orange,

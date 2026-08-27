@@ -71,11 +71,29 @@
                             неразобранные</span>
                     </div>
                     <div class="sales-column__content">
-                        <div class="sales-column__call call call--red">
+                        <div class="sales-column__call call call--orange">
                             <span class="call__status call__status--light-gray">Новый</span>
                             <div class="call__block">
                                 <span class="call__city">Москва</span>
                                 <span class="call__comment">Входящий звонок</span>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__name">Святослав Игоревич</span>
+                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
+                            </div>
+                            <div class="call__block">
+                                <span class="call__response">Отв: Морозова А.В</span>
+                                <div class="call__info row row-flex">
+                                    <span class="call__circle call__circle--orange"></span>
+                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sales-column__call call call--red">
+                            <span class="call__status call__status--red">Горит</span>
+                            <div class="call__block">
+                                <span class="call__city">Москва</span>
+                                <span class="call__comment"> </span>
                             </div>
                             <div class="call__block">
                                 <span class="call__name">Святослав Игоревич</span>
@@ -89,7 +107,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="sales-column__call call call--red">
+                        <div class="sales-column__call call call--gray">
                             <span class="call__status call__status--light-gray">Новый</span>
                             <div class="call__block">
                                 <span class="call__city">Москва</span>
@@ -102,25 +120,7 @@
                             <div class="call__block">
                                 <span class="call__response">Отв: Морозова А.В</span>
                                 <div class="call__info row row-flex">
-                                    <span class="call__circle call__circle--red"></span>
-                                    <span class="call__time">Без контакта: 2 ч 16 мин</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sales-column__call call call--red">
-                            <span class="call__status call__status--light-gray">Новый</span>
-                            <div class="call__block">
-                                <span class="call__city">Москва</span>
-                                <span class="call__comment">Входящий звонок</span>
-                            </div>
-                            <div class="call__block">
-                                <span class="call__name">Святослав Игоревич</span>
-                                <a href="tel:" class="call__phone">+7 952 270-47-31</a>
-                            </div>
-                            <div class="call__block">
-                                <span class="call__response">Отв: Морозова А.В</span>
-                                <div class="call__info row row-flex">
-                                    <span class="call__circle call__circle--red"></span>
+                                    <span class="call__circle call__circle--gray"></span>
                                     <span class="call__time">Без контакта: 2 ч 16 мин</span>
                                 </div>
                             </div>
@@ -810,9 +810,9 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script>
-        (function () {
+        (function() {
             var columns = Array.prototype.slice.call(document.querySelectorAll('.sales-funnel__item.sales-column'));
-            columns.forEach(function (column, index) {
+            columns.forEach(function(column, index) {
                 column.dataset.columnIndex = index;
             });
 
@@ -854,11 +854,11 @@
                 sourceColumn = null;
             }
 
-            document.querySelectorAll('.sales-column__call.call.call--red').forEach(function (card) {
+            document.querySelectorAll('.sales-column__call.call.call--red').forEach(function(card) {
                 card.classList.add('call--draggable');
                 card.setAttribute('draggable', 'true');
 
-                card.addEventListener('dragstart', function (e) {
+                card.addEventListener('dragstart', function(e) {
                     var column = card.closest('.sales-funnel__item.sales-column');
                     draggedCard = card;
                     draggedFromIndex = column ? Number(column.dataset.columnIndex) : -1;
@@ -872,17 +872,17 @@
                     }
                 });
 
-                card.addEventListener('dragend', function () {
+                card.addEventListener('dragend', function() {
                     card.classList.remove('call--dragging');
                     cleanupDrag();
                 });
             });
 
-            columns.forEach(function (column, index) {
+            columns.forEach(function(column, index) {
                 var content = column.querySelector('.sales-column__content');
                 if (!content) return;
 
-                content.addEventListener('dragover', function (e) {
+                content.addEventListener('dragover', function(e) {
                     if (!draggedCard || index <= draggedFromIndex) return;
                     e.preventDefault();
                     e.dataTransfer.dropEffect = 'move';
@@ -894,7 +894,7 @@
                     }
                 });
 
-                content.addEventListener('drop', function (e) {
+                content.addEventListener('drop', function(e) {
                     if (!draggedCard || index <= draggedFromIndex) return;
                     e.preventDefault();
                     var fromColumn = sourceColumn;
