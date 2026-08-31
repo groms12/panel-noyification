@@ -163,6 +163,10 @@
 
 /* стили для воронки клиентов */
 
+.no-scroll {
+    overflow: hidden;
+}
+
 .red-notificate {
     color: #f97316;
 }
