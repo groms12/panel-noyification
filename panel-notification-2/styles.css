@@ -4,6 +4,7 @@
     background: #fff;
     font-size: 14px;
     --orange: #ff7013;
+    --card-height: 250px;
     --blue: #639aff
 }
 
@@ -363,7 +364,9 @@ b {
     background: white;
     border-left: 4px solid var(--accent);
     border-radius: 5px;
-    min-height: 240px;
+    height: var(--card-height);
+    min-height: var(--card-height);
+    flex-shrink: 0;
     padding: 10px 11px 32px;
     font-size: 14px;
     cursor: pointer
@@ -738,4 +741,13 @@ dialog a {
 
 .bulb .figma-icon {
     pointer-events: none;
+}
+
+
+/* Keep card rows aligned across all funnel columns. */
+
+.drop-placeholder {
+    height: var(--card-height);
+    min-height: var(--card-height);
+    flex-shrink: 0;
 }
