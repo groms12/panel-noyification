@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ДМ — Воронка клиентов</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <aside class="sidebar"><a class="brand" href="./" aria-label="Главная">ДМ</a>
+        <nav id="navigation" aria-label="Навигация">
+            <button class="nav-item" title="Меню" type="button" aria-label="Меню"><span class="figma-menu-icon" aria-hidden="true"><img src="assets/icons/figma-783.png" alt="" width="40" height="318" style="top:3.9241px"></span></button>
+            <button class="nav-item" title="Главная" type="button" aria-label="Главная"><span class="figma-menu-icon" aria-hidden="true"><img src="assets/icons/figma-783.png" alt="" width="40" height="318" style="top:-54.0405px"></span></button>
+            <button class="nav-item" title="Клиенты" type="button" aria-label="Клиенты"><span class="figma-menu-icon" aria-hidden="true"><img src="assets/icons/figma-783.png" alt="" width="40" height="318" style="top:-92.6835px"></span></button>
+            <button class="nav-item" title="Календарь" type="button" aria-label="Календарь"><span class="figma-menu-icon" aria-hidden="true"><img src="assets/icons/figma-783.png" alt="" width="40" height="318" style="top:-131.3266px"></span></button>
+            <button class="nav-item" title="Избранное" type="button" aria-label="Избранное"><span class="figma-menu-icon" aria-hidden="true"><img src="assets/icons/figma-783.png" alt="" width="40" height="318" style="top:-169.9696px"></span></button>
+            <button class="nav-item active" title="Воронка клиентов" type="button" aria-label="Воронка клиентов"><span class="figma-menu-icon active-funnel" aria-hidden="true"><img src="assets/icons/figma-784.png" alt="" width="45" height="36"></span></button>
+            <button class="nav-item" title="Статистика" type="button" aria-label="Статистика"><span class="figma-menu-icon" aria-hidden="true"><img src="assets/icons/figma-783.png" alt="" width="40" height="318" style="top:-247.2557px"></span></button>
+            <button class="nav-item" title="Уведомления" type="button" aria-label="Уведомления"><span class="figma-menu-icon" aria-hidden="true"><img src="assets/icons/figma-783.png" alt="" width="40" height="318" style="top:-285.8987px"></span></button>
+        </nav>
+        <div class="sidebar-bottom" id="bottom-navigation">
+            <span class="nav-item" title="Отчеты"><span class="figma-menu-icon" aria-hidden="true"><img src="assets/icons/figma-781.png" alt="" width="46" height="227" style="top:-17.1210px"></span></span>
+            <span class="nav-item" title="Профиль"><span class="figma-menu-icon" aria-hidden="true"><img src="assets/icons/figma-781.png" alt="" width="46" height="227" style="top:-55.8968px"></span></span>
+            <span class="nav-item" title="Настройки"><span class="figma-menu-icon" aria-hidden="true"><img src="assets/icons/figma-781.png" alt="" width="46" height="227" style="top:-94.6726px"></span></span>
+            <span class="nav-item" title="Выход"><span class="figma-menu-icon" aria-hidden="true"><img src="assets/icons/figma-781.png" alt="" width="46" height="227" style="top:-133.4484px"></span></span>
+        </div>
+    </aside>
+    <main>
+        <header class="toolbar">
+            <div class="heading">
+                <h1>Воронка клиентов</h1><small>Сегодня: чт. 22.09.2026&nbsp; 13:00</small></div>
+            <button class="attention" id="attention"> <span class="figma-icon icon-fire" aria-hidden="true" style="width:14.8820px;height:20.0000px"><img src="assets/icons/figma-792.svg" alt="" width="14.882" height="20" style="left:0.0000px;top:0.0000px"></span> Требуют внимания <b>5</b></button>
+            <select id="scope" aria-label="Набор карточек">
+                <option value="all">Все карточки ✓</option>
+                <option value="attention">Требуют внимания</option>
+            </select>
+            <button class="filter" data-filter="mine">Только мои</button>
+            <button class="filter" data-filter="office">Мой офис</button>
+            <button class="filter" data-filter="city">Мой город</button>
+            <select id="rfo" aria-label="РФО">
+                <option value="">РФО</option>
+                <option>Москва</option>
+                <option>Новосибирск</option>
+                <option>Ярославль</option>
+            </select>
+            <button class="filter no-task" data-filter="no-task">Карточки<br>без задачи <b>1</b></button>
+            <label class="select-icon">
+                <span><span class="figma-icon icon-users" aria-hidden="true" style="width:22.7559px;height:20.9999px"><img src="assets/icons/figma-797.svg" alt="" width="4.397" height="8.921" style="left:18.3589px;top:12.0788px"><img src="assets/icons/figma-798.svg" alt="" width="5.444" height="9.889" style="left:15.1613px;top:0.0716px"><img src="assets/icons/figma-799.svg" alt="" width="16.484" height="8.921" style="left:0.0000px;top:12.0789px"><img src="assets/icons/figma-800.svg" alt="" width="10.032" height="10.032" style="left:3.2261px;top:0.0000px"></span></span>
+                <select id="owner" aria-label="Ответственный">
+                    <option value="">Ответственный</option>
+                    <option>Усович В.О</option>
+                    <option>Данилов Е.Г</option>
+                    <option>Багров Е.Г</option>
+                    <option>Егоренков Е.Г</option>
+                    <option>Коломенский Е.Г</option>
+                    <option>Фирстов О.Е</option>
+                </select>
+            </label>
+            <label class="select-icon"><span><span class="figma-icon icon-calendar" aria-hidden="true" style="width:20.0000px;height:18.7426px"><img src="assets/icons/figma-1163.svg" alt="" width="20" height="17.765" style="left:0.0000px;top:0.9776px"><img src="assets/icons/figma-1164.svg" alt="" width="1" height="4.436" style="left:4.8896px;top:0.0000px"><img src="assets/icons/figma-1165.svg" alt="" width="1" height="4.436" style="left:14.1769px;top:0.0000px"><img src="assets/icons/figma-1166.svg" alt="" width="20" height="1" style="left:0.0000px;top:5.5299px"><img src="assets/icons/figma-1167.svg" alt="" width="4.333" height="1" style="left:7.8300px;top:8.4754px"><img src="assets/icons/figma-1168.svg" alt="" width="4.333" height="1" style="left:12.8064px;top:8.4754px"><img src="assets/icons/figma-1169.svg" alt="" width="4.333" height="1" style="left:7.8300px;top:14.4627px"><img src="assets/icons/figma-1170.svg" alt="" width="4.333" height="1" style="left:12.8064px;top:14.4627px"><img src="assets/icons/figma-1171.svg" alt="" width="4.333" height="1" style="left:3.0101px;top:14.4627px"><img src="assets/icons/figma-1172.svg" alt="" width="4.333" height="1" style="left:7.8300px;top:11.4691px"><img src="assets/icons/figma-1173.svg" alt="" width="4.333" height="1" style="left:12.8064px;top:11.4691px"><img src="assets/icons/figma-1174.svg" alt="" width="4.333" height="1" style="left:3.0101px;top:11.3892px"></span></span>
+                <select id="date" aria-label="Дата обращения">
+                    <option value="">Дата обращения</option>
+                    <option value="asc">Сначала старые</option>
+                    <option value="desc">Сначала новые</option>
+                </select>
+            </label>
+            <div class="second-row">
+                <label class="search">
+                    <span><span class="figma-icon icon-search" aria-hidden="true" style="width:21.7000px;height:23.0000px"><img src="assets/icons/figma-1143.svg" alt="" width="21.7" height="23" style="left:0.0000px;top:0.0000px"></span></span>
+                    <input id="search" placeholder="Поиск по имени, телефону…" aria-label="Поиск по имени и телефону">
+                </label>
+                <div class="status-filters">
+                    <button data-status="unknown">Неопознанное<br>обращение <b>1</b></button>
+                    <button data-status="nonclient">Не клиент <b>3</b></button>
+                    <button data-status="stop">Клиента больше<br>не беспокоить <b>10</b></button>
+                </div>
+            </div>
+        </header>
+        <section class="board" id="board" aria-label="Воронка клиентов">
+            <section class="column" data-stage="0" style="--tint:#f0f2fc">
+                <header class="column-head"><span class="count">113</span>
+                    <div class="title">Лиды:<br>неразобранные</div><button class="sort" data-sort="0" aria-label="Изменить порядок карточек">↑↓</button></header>
+                <div class="cards">
+                    <article class="card" draggable="true" title="Перетащите карточку в колонку справа или измените её порядок" tabindex="0" role="button" data-id="0" data-city="Москва" data-attention="true" aria-label="Карточка: Имя не указано" style="--accent:#ff7013;--shade:#fff5ee">
+                        <div class="card-top"><span>Москва<br>Заявка с сайта</span></div>
+                        <h3>Имя не указано</h3>
+                        <div class="phone">+7 952 270-47-31</div>
+                        <div class="owner">Отв: <strong>Не назначен</strong></div>
+
+                        <div class="task highlight hover-only">Ждёт ответа<br>10 мин</div>
+                        <div class="card-date"><span class="figma-icon icon-card-calendar" aria-hidden="true" style="width:16.3314px;height:15.3170px"><img src="assets/icons/figma-1109.svg" alt="" width="16.331" height="14.528" style="left:0.0004px;top:0.7890px"><img src="assets/icons/figma-1110.svg" alt="" width="1" height="3.773" style="left:3.9456px;top:0.0000px"><img src="assets/icons/figma-1111.svg" alt="" width="1" height="3.773" style="left:11.4397px;top:0.0000px"><img src="assets/icons/figma-1112.svg" alt="" width="16.331" height="1" style="left:0.0000px;top:4.4622px"><img src="assets/icons/figma-1113.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:6.8391px"><img src="assets/icons/figma-1114.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:6.8391px"><img src="assets/icons/figma-1115.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:11.6704px"><img src="assets/icons/figma-1116.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:11.6704px"><img src="assets/icons/figma-1117.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:11.6704px"><img src="assets/icons/figma-1118.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:9.2547px"><img src="assets/icons/figma-1119.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:9.2547px"><img src="assets/icons/figma-1120.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:9.1903px"></span> <span class="date-value">22.09 11:01</span></div>
+                    </article>
+                </div>
+            </section>
+            <section class="column" data-stage="1" style="--tint:#e1e8ff">
+                <header class="column-head"><span class="count">1</span>
+                    <div class="title">Лиды:<br>в работе (дозвон)</div><button class="sort" data-sort="1" aria-label="Изменить порядок карточек">↑↓</button></header>
+                <div class="cards">
+                    <article class="card" draggable="true" title="Перетащите карточку в колонку справа или измените её порядок" tabindex="0" role="button" data-id="1" data-city="Новосибирск" data-attention="false" aria-label="Карточка: Василиса Игоревна" style="--accent:#639aff;--shade:#edf3ff">
+                        <div class="card-top"><span class="document-icon"><span class="figma-icon icon-document" aria-hidden="true" style="width:30.0000px;height:30.0000px"><img src="assets/icons/figma-809.svg" alt="" width="30" height="30" style="left:0.0000px;top:0.0000px"><img src="assets/icons/figma-810.svg" alt="" width="18.654" height="22.185" style="left:5.5591px;top:3.9073px"><img src="assets/icons/figma-811.svg" alt="" width="6.64761" height="6.64761" style="left:17.3275px;top:4.1456px"><img src="assets/icons/figma-812.svg" alt="" width="10.581" height="6.349" style="left:9.5958px;top:18.8675px"><img src="assets/icons/figma-813.svg" alt="" width="6.107" height="6.106" style="left:11.8324px;top:12.0384px"></span></span><span>Новосибирск<br>Заявка с сайта</span></div>
+                        <h3>Василиса Игоревна</h3>
+                        <div class="phone">+7 952 270-47-31</div>
+                        <div class="owner">Отв: <strong>Данилов Е.Г</strong></div>
+                        <div class="calls">Звонков <strong>2/4</strong></div>
+                        <div class="task highlight hover-only">Позвонить сегодня<br>в 15:40</div>
+                        <div class="card-date"><span class="figma-icon icon-card-calendar" aria-hidden="true" style="width:16.3314px;height:15.3170px"><img src="assets/icons/figma-1109.svg" alt="" width="16.331" height="14.528" style="left:0.0004px;top:0.7890px"><img src="assets/icons/figma-1110.svg" alt="" width="1" height="3.773" style="left:3.9456px;top:0.0000px"><img src="assets/icons/figma-1111.svg" alt="" width="1" height="3.773" style="left:11.4397px;top:0.0000px"><img src="assets/icons/figma-1112.svg" alt="" width="16.331" height="1" style="left:0.0000px;top:4.4622px"><img src="assets/icons/figma-1113.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:6.8391px"><img src="assets/icons/figma-1114.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:6.8391px"><img src="assets/icons/figma-1115.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:11.6704px"><img src="assets/icons/figma-1116.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:11.6704px"><img src="assets/icons/figma-1117.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:11.6704px"><img src="assets/icons/figma-1118.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:9.2547px"><img src="assets/icons/figma-1119.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:9.2547px"><img src="assets/icons/figma-1120.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:9.1903px"></span> <span class="date-value">22.09 </span></div>
+                    </article>
+                </div>
+            </section>
+            <section class="column" data-stage="2" style="--tint:#fcffe8">
+                <header class="column-head"><span class="count">3</span>
+                    <div class="title">Потенциальные:<br>неразобранные</div><button class="sort" data-sort="2" aria-label="Изменить порядок карточек">↑↓</button></header>
+                <div class="cards">
+                    <article class="card" draggable="true" title="Перетащите карточку в колонку справа или измените её порядок" tabindex="0" role="button" data-id="2" data-city="Ярославль" data-attention="false" aria-label="Карточка: Василиса Игоревна" style="--accent:#ffdaa2;--shade:#fff5ee">
+                        <div class="card-top"><span class="document-icon"><span class="figma-icon icon-document" aria-hidden="true" style="width:30.0000px;height:30.0000px"><img src="assets/icons/figma-809.svg" alt="" width="30" height="30" style="left:0.0000px;top:0.0000px"><img src="assets/icons/figma-810.svg" alt="" width="18.654" height="22.185" style="left:5.5591px;top:3.9073px"><img src="assets/icons/figma-811.svg" alt="" width="6.64761" height="6.64761" style="left:17.3275px;top:4.1456px"><img src="assets/icons/figma-812.svg" alt="" width="10.581" height="6.349" style="left:9.5958px;top:18.8675px"><img src="assets/icons/figma-813.svg" alt="" width="6.107" height="6.106" style="left:11.8324px;top:12.0384px"></span></span><span>Ярославль<br>Заявка с сайта</span></div>
+                        <h3>Василиса Игоревна</h3>
+                        <div class="phone">+7 952 270-47-31</div>
+                        <div class="owner">Отв: <strong>Багров Е.Г</strong></div>
+
+                        <div class="task highlight hover-only">Позвонить сегодня<br>в 15:40</div>
+                        <div class="card-date"><span class="figma-icon icon-card-calendar" aria-hidden="true" style="width:16.3314px;height:15.3170px"><img src="assets/icons/figma-1109.svg" alt="" width="16.331" height="14.528" style="left:0.0004px;top:0.7890px"><img src="assets/icons/figma-1110.svg" alt="" width="1" height="3.773" style="left:3.9456px;top:0.0000px"><img src="assets/icons/figma-1111.svg" alt="" width="1" height="3.773" style="left:11.4397px;top:0.0000px"><img src="assets/icons/figma-1112.svg" alt="" width="16.331" height="1" style="left:0.0000px;top:4.4622px"><img src="assets/icons/figma-1113.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:6.8391px"><img src="assets/icons/figma-1114.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:6.8391px"><img src="assets/icons/figma-1115.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:11.6704px"><img src="assets/icons/figma-1116.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:11.6704px"><img src="assets/icons/figma-1117.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:11.6704px"><img src="assets/icons/figma-1118.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:9.2547px"><img src="assets/icons/figma-1119.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:9.2547px"><img src="assets/icons/figma-1120.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:9.1903px"></span> <span class="date-value">22.09 </span></div>
+                    </article>
+                </div>
+            </section>
+            <section class="column" data-stage="3" style="--tint:#fbffd0">
+                <header class="column-head"><span class="count">1</span>
+                    <div class="title">Потенциальные:<br>в работе (дозвон)</div><button class="sort" data-sort="3" aria-label="Изменить порядок карточек">↑↓</button></header>
+                <div class="cards">
+                    <article class="card" draggable="true" title="Перетащите карточку в колонку справа или измените её порядок" tabindex="0" role="button" data-id="3" data-city="" data-attention="false" aria-label="Карточка: Василиса Игоревна" style="--accent:#ff7013;--shade:#fff5ee">
+                        <div class="card-top"><span><span class="figma-icon icon-document" aria-hidden="true" style="width:30.0000px;height:30.0000px"><img src="assets/icons/figma-809.svg" alt="" width="30" height="30" style="left:0.0000px;top:0.0000px"><img src="assets/icons/figma-810.svg" alt="" width="18.654" height="22.185" style="left:5.5591px;top:3.9073px"><img src="assets/icons/figma-811.svg" alt="" width="6.64761" height="6.64761" style="left:17.3275px;top:4.1456px"><img src="assets/icons/figma-812.svg" alt="" width="10.581" height="6.349" style="left:9.5958px;top:18.8675px"><img src="assets/icons/figma-813.svg" alt="" width="6.107" height="6.106" style="left:11.8324px;top:12.0384px"></span></span></div>
+                        <h3>Василиса Игоревна</h3>
+                        <div class="phone">+7 952 270-47-31</div>
+                        <div class="owner">Отв: <strong>Егоренков Е.Г</strong></div>
+
+                        <div class="task highlight hover-only">Позвонить сегодня<br>в 15:40</div>
+                        <div class="card-date"><span class="figma-icon icon-card-calendar" aria-hidden="true" style="width:16.3314px;height:15.3170px"><img src="assets/icons/figma-1109.svg" alt="" width="16.331" height="14.528" style="left:0.0004px;top:0.7890px"><img src="assets/icons/figma-1110.svg" alt="" width="1" height="3.773" style="left:3.9456px;top:0.0000px"><img src="assets/icons/figma-1111.svg" alt="" width="1" height="3.773" style="left:11.4397px;top:0.0000px"><img src="assets/icons/figma-1112.svg" alt="" width="16.331" height="1" style="left:0.0000px;top:4.4622px"><img src="assets/icons/figma-1113.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:6.8391px"><img src="assets/icons/figma-1114.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:6.8391px"><img src="assets/icons/figma-1115.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:11.6704px"><img src="assets/icons/figma-1116.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:11.6704px"><img src="assets/icons/figma-1117.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:11.6704px"><img src="assets/icons/figma-1118.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:9.2547px"><img src="assets/icons/figma-1119.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:9.2547px"><img src="assets/icons/figma-1120.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:9.1903px"></span> <span class="date-value">22.09 </span></div>
+                    </article>
+                    <article class="card" draggable="true" title="Перетащите карточку в колонку справа или измените её порядок" tabindex="0" role="button" data-id="4" data-city="" data-attention="true" aria-label="Карточка: Екатерина Игоревна" style="--accent:#ffdaa2;--shade:#fff5ee">
+                        <div class="card-top"><span><span class="figma-icon icon-document" aria-hidden="true" style="width:30.0000px;height:30.0000px"><img src="assets/icons/figma-809.svg" alt="" width="30" height="30" style="left:0.0000px;top:0.0000px"><img src="assets/icons/figma-810.svg" alt="" width="18.654" height="22.185" style="left:5.5591px;top:3.9073px"><img src="assets/icons/figma-811.svg" alt="" width="6.64761" height="6.64761" style="left:17.3275px;top:4.1456px"><img src="assets/icons/figma-812.svg" alt="" width="10.581" height="6.349" style="left:9.5958px;top:18.8675px"><img src="assets/icons/figma-813.svg" alt="" width="6.107" height="6.106" style="left:11.8324px;top:12.0384px"></span></span></div>
+                        <h3>Екатерина Игоревна</h3>
+                        <div class="phone">+7 952 270-47-31</div>
+                        <div class="owner">Отв: <strong>Усович В.О</strong></div>
+
+                        <div class="task highlight hover-only">Позвонить сегодня<br>в 15:40</div>
+                        <div class="card-date"><span class="figma-icon icon-card-calendar" aria-hidden="true" style="width:16.3314px;height:15.3170px"><img src="assets/icons/figma-1109.svg" alt="" width="16.331" height="14.528" style="left:0.0004px;top:0.7890px"><img src="assets/icons/figma-1110.svg" alt="" width="1" height="3.773" style="left:3.9456px;top:0.0000px"><img src="assets/icons/figma-1111.svg" alt="" width="1" height="3.773" style="left:11.4397px;top:0.0000px"><img src="assets/icons/figma-1112.svg" alt="" width="16.331" height="1" style="left:0.0000px;top:4.4622px"><img src="assets/icons/figma-1113.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:6.8391px"><img src="assets/icons/figma-1114.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:6.8391px"><img src="assets/icons/figma-1115.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:11.6704px"><img src="assets/icons/figma-1116.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:11.6704px"><img src="assets/icons/figma-1117.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:11.6704px"><img src="assets/icons/figma-1118.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:9.2547px"><img src="assets/icons/figma-1119.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:9.2547px"><img src="assets/icons/figma-1120.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:9.1903px"></span> <span class="date-value">22.09 </span></div>
+                    </article>
+                    <article class="card" draggable="true" title="Перетащите карточку в колонку справа или измените её порядок" tabindex="0" role="button" data-id="5" data-city="" data-attention="false" aria-label="Карточка: Екатерина Игоревна" style="--accent:#639aff;--shade:#edf3ff">
+                        <div class="card-top"><span><span class="figma-icon icon-document" aria-hidden="true" style="width:30.0000px;height:30.0000px"><img src="assets/icons/figma-809.svg" alt="" width="30" height="30" style="left:0.0000px;top:0.0000px"><img src="assets/icons/figma-810.svg" alt="" width="18.654" height="22.185" style="left:5.5591px;top:3.9073px"><img src="assets/icons/figma-811.svg" alt="" width="6.64761" height="6.64761" style="left:17.3275px;top:4.1456px"><img src="assets/icons/figma-812.svg" alt="" width="10.581" height="6.349" style="left:9.5958px;top:18.8675px"><img src="assets/icons/figma-813.svg" alt="" width="6.107" height="6.106" style="left:11.8324px;top:12.0384px"></span></span></div>
+                        <h3>Екатерина Игоревна</h3>
+                        <div class="phone">+7 952 270-47-31</div>
+                        <div class="owner">Отв: <strong>Усович В.О</strong></div>
+
+                        <div class="task highlight hover-only">Позвонить сегодня<br>в 15:40</div>
+                        <div class="card-date"><span class="figma-icon icon-card-calendar" aria-hidden="true" style="width:16.3314px;height:15.3170px"><img src="assets/icons/figma-1109.svg" alt="" width="16.331" height="14.528" style="left:0.0004px;top:0.7890px"><img src="assets/icons/figma-1110.svg" alt="" width="1" height="3.773" style="left:3.9456px;top:0.0000px"><img src="assets/icons/figma-1111.svg" alt="" width="1" height="3.773" style="left:11.4397px;top:0.0000px"><img src="assets/icons/figma-1112.svg" alt="" width="16.331" height="1" style="left:0.0000px;top:4.4622px"><img src="assets/icons/figma-1113.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:6.8391px"><img src="assets/icons/figma-1114.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:6.8391px"><img src="assets/icons/figma-1115.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:11.6704px"><img src="assets/icons/figma-1116.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:11.6704px"><img src="assets/icons/figma-1117.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:11.6704px"><img src="assets/icons/figma-1118.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:9.2547px"><img src="assets/icons/figma-1119.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:9.2547px"><img src="assets/icons/figma-1120.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:9.1903px"></span> <span class="date-value">22.09 </span></div>
+                    </article>
+                </div>
+            </section>
+            <section class="column" data-stage="4" style="--tint:#f7fac1">
+                <header class="column-head"><span class="count">1</span>
+                    <div class="title">Потенциальные:<br>встреча назначена</div><button class="sort" data-sort="4" aria-label="Изменить порядок карточек">↑↓</button></header>
+                <div class="cards">
+                    <article class="card" draggable="true" title="Перетащите карточку в колонку справа или измените её порядок" tabindex="0" role="button" data-id="6" data-city="" data-attention="false" aria-label="Карточка: Михаил Борисович" style="--accent:#ffdaa2;--shade:#fff5ee">
+                        <div class="card-top"><span><span class="figma-icon icon-document" aria-hidden="true" style="width:30.0000px;height:30.0000px"><img src="assets/icons/figma-809.svg" alt="" width="30" height="30" style="left:0.0000px;top:0.0000px"><img src="assets/icons/figma-810.svg" alt="" width="18.654" height="22.185" style="left:5.5591px;top:3.9073px"><img src="assets/icons/figma-811.svg" alt="" width="6.64761" height="6.64761" style="left:17.3275px;top:4.1456px"><img src="assets/icons/figma-812.svg" alt="" width="10.581" height="6.349" style="left:9.5958px;top:18.8675px"><img src="assets/icons/figma-813.svg" alt="" width="6.107" height="6.106" style="left:11.8324px;top:12.0384px"></span></span></div>
+                        <h3>Михаил Борисович</h3>
+                        <div class="phone">+7 952 270-47-31</div>
+                        <div class="owner">Отв: <strong>Коломенский Е.Г</strong><br>⟶ <strong>Усович И.А</strong></div>
+
+                        <div class="task highlight hover-only">Встреча сегодня<br>в 18:00</div>
+                        <div class="card-date"><span class="figma-icon icon-card-calendar" aria-hidden="true" style="width:16.3314px;height:15.3170px"><img src="assets/icons/figma-1109.svg" alt="" width="16.331" height="14.528" style="left:0.0004px;top:0.7890px"><img src="assets/icons/figma-1110.svg" alt="" width="1" height="3.773" style="left:3.9456px;top:0.0000px"><img src="assets/icons/figma-1111.svg" alt="" width="1" height="3.773" style="left:11.4397px;top:0.0000px"><img src="assets/icons/figma-1112.svg" alt="" width="16.331" height="1" style="left:0.0000px;top:4.4622px"><img src="assets/icons/figma-1113.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:6.8391px"><img src="assets/icons/figma-1114.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:6.8391px"><img src="assets/icons/figma-1115.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:11.6704px"><img src="assets/icons/figma-1116.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:11.6704px"><img src="assets/icons/figma-1117.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:11.6704px"><img src="assets/icons/figma-1118.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:9.2547px"><img src="assets/icons/figma-1119.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:9.2547px"><img src="assets/icons/figma-1120.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:9.1903px"></span> <span class="date-value">22.09 </span></div>
+                    </article>
+                </div>
+            </section>
+            <section class="column" data-stage="5" style="--tint:#eff4b7">
+                <header class="column-head"><span class="count">3</span>
+                    <div class="title">Потенциальные:<br>был в офисе</div><button class="add-visitor" id="add-visitor"><span class="figma-icon icon-pin" aria-hidden="true" style="width:15.0000px;height:18.5137px"><img src="assets/icons/figma-1186.svg" alt="" width="15" height="18.5137" style="left:0.0000px;top:0.0000px"><span class="visitor-plus">+</span></span> Добавить посетителя</button>
+                    <button
+                        class="sort" data-sort="5" aria-label="Изменить порядок карточек">↑↓</button>
+                </header>
+                <div class="cards">
+                    <article class="card" draggable="true" title="Перетащите карточку в колонку справа или измените её порядок" tabindex="0" role="button" data-id="7" data-city="" data-attention="false" aria-label="Карточка: Елена Васильевна" style="--accent:#ff7013;--shade:#fff5ee">
+                        <div class="card-top"><span><span class="figma-icon icon-document" aria-hidden="true" style="width:30.0000px;height:30.0000px"><img src="assets/icons/figma-809.svg" alt="" width="30" height="30" style="left:0.0000px;top:0.0000px"><img src="assets/icons/figma-810.svg" alt="" width="18.654" height="22.185" style="left:5.5591px;top:3.9073px"><img src="assets/icons/figma-811.svg" alt="" width="6.64761" height="6.64761" style="left:17.3275px;top:4.1456px"><img src="assets/icons/figma-812.svg" alt="" width="10.581" height="6.349" style="left:9.5958px;top:18.8675px"><img src="assets/icons/figma-813.svg" alt="" width="6.107" height="6.106" style="left:11.8324px;top:12.0384px"></span></span> &nbsp; Был 11 дн. назад</div>
+                        <h3>Елена Васильевна</h3>
+                        <div class="phone">+7 952 270-47-31</div>
+                        <div class="owner">Отв: <strong>Усович В.О</strong></div>
+
+                        <div class="task highlight hover-only">Позвонить сегодня<br>в 15:40</div>
+                        <div class="card-date"><span class="figma-icon icon-card-calendar" aria-hidden="true" style="width:16.3314px;height:15.3170px"><img src="assets/icons/figma-1109.svg" alt="" width="16.331" height="14.528" style="left:0.0004px;top:0.7890px"><img src="assets/icons/figma-1110.svg" alt="" width="1" height="3.773" style="left:3.9456px;top:0.0000px"><img src="assets/icons/figma-1111.svg" alt="" width="1" height="3.773" style="left:11.4397px;top:0.0000px"><img src="assets/icons/figma-1112.svg" alt="" width="16.331" height="1" style="left:0.0000px;top:4.4622px"><img src="assets/icons/figma-1113.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:6.8391px"><img src="assets/icons/figma-1114.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:6.8391px"><img src="assets/icons/figma-1115.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:11.6704px"><img src="assets/icons/figma-1116.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:11.6704px"><img src="assets/icons/figma-1117.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:11.6704px"><img src="assets/icons/figma-1118.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:9.2547px"><img src="assets/icons/figma-1119.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:9.2547px"><img src="assets/icons/figma-1120.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:9.1903px"></span> <span class="date-value">22.09 </span></div>
+                    </article>
+                </div>
+            </section>
+            <section class="column" data-stage="6" style="--tint:#e1eeab">
+                <header class="column-head"><span class="count">2</span>
+                    <div class="title">Потенциальные:<br>онлайн-заказ</div><button class="sort" data-sort="6" aria-label="Изменить порядок карточек">↑↓</button></header>
+                <div class="cards">
+                    <article class="card" draggable="true" title="Перетащите карточку в колонку справа или измените её порядок" tabindex="0" role="button" data-id="8" data-city="" data-attention="true" aria-label="Карточка: Елена Васильевна" style="--accent:#ff7013;--shade:#fff5ee">
+                        <div class="card-top"><span><span class="figma-icon icon-document" aria-hidden="true" style="width:30.0000px;height:30.0000px"><img src="assets/icons/figma-809.svg" alt="" width="30" height="30" style="left:0.0000px;top:0.0000px"><img src="assets/icons/figma-810.svg" alt="" width="18.654" height="22.185" style="left:5.5591px;top:3.9073px"><img src="assets/icons/figma-811.svg" alt="" width="6.64761" height="6.64761" style="left:17.3275px;top:4.1456px"><img src="assets/icons/figma-812.svg" alt="" width="10.581" height="6.349" style="left:9.5958px;top:18.8675px"><img src="assets/icons/figma-813.svg" alt="" width="6.107" height="6.106" style="left:11.8324px;top:12.0384px"></span></span><button class="bulb" aria-label="Комментарий"><span class="figma-icon icon-bulb" aria-hidden="true" style="width:17.0000px;height:24.7325px"><img src="assets/icons/figma-871.svg" alt="" width="16" height="23.7324" style="left:0.5000px;top:0.5000px"><img src="assets/icons/figma-872.svg" alt="" width="17" height="24.7325" style="left:0.0000px;top:0.0000px"></span></button>
+                            <span
+                                class="note">Клиент ожидает звонка</span>
+                        </div>
+                        <h3>Елена Васильевна</h3>
+                        <div class="phone">+7 952 270-47-31</div>
+                        <div class="owner">Отв: <strong>Усович В.О</strong></div>
+
+                        <div class="task highlight hover-only">Позвонить сегодня<br>в 15:40</div>
+                        <div class="card-date"><span class="figma-icon icon-card-calendar" aria-hidden="true" style="width:16.3314px;height:15.3170px"><img src="assets/icons/figma-1109.svg" alt="" width="16.331" height="14.528" style="left:0.0004px;top:0.7890px"><img src="assets/icons/figma-1110.svg" alt="" width="1" height="3.773" style="left:3.9456px;top:0.0000px"><img src="assets/icons/figma-1111.svg" alt="" width="1" height="3.773" style="left:11.4397px;top:0.0000px"><img src="assets/icons/figma-1112.svg" alt="" width="16.331" height="1" style="left:0.0000px;top:4.4622px"><img src="assets/icons/figma-1113.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:6.8391px"><img src="assets/icons/figma-1114.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:6.8391px"><img src="assets/icons/figma-1115.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:11.6704px"><img src="assets/icons/figma-1116.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:11.6704px"><img src="assets/icons/figma-1117.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:11.6704px"><img src="assets/icons/figma-1118.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:9.2547px"><img src="assets/icons/figma-1119.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:9.2547px"><img src="assets/icons/figma-1120.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:9.1903px"></span> <span class="date-value">22.09 </span></div>
+                    </article>
+                    <article class="card" draggable="true" title="Перетащите карточку в колонку справа или измените её порядок" tabindex="0" role="button" data-id="9" data-city="" data-attention="true" aria-label="Карточка: Елена Васильевна" style="--accent:#ff7013;--shade:#fff5ee">
+                        <div class="card-top"><span><span class="figma-icon icon-document" aria-hidden="true" style="width:30.0000px;height:30.0000px"><img src="assets/icons/figma-809.svg" alt="" width="30" height="30" style="left:0.0000px;top:0.0000px"><img src="assets/icons/figma-810.svg" alt="" width="18.654" height="22.185" style="left:5.5591px;top:3.9073px"><img src="assets/icons/figma-811.svg" alt="" width="6.64761" height="6.64761" style="left:17.3275px;top:4.1456px"><img src="assets/icons/figma-812.svg" alt="" width="10.581" height="6.349" style="left:9.5958px;top:18.8675px"><img src="assets/icons/figma-813.svg" alt="" width="6.107" height="6.106" style="left:11.8324px;top:12.0384px"></span></span><button class="bulb" aria-label="Комментарий"><span class="figma-icon icon-bulb" aria-hidden="true" style="width:17.0000px;height:24.7325px"><img src="assets/icons/figma-871.svg" alt="" width="16" height="23.7324" style="left:0.5000px;top:0.5000px"><img src="assets/icons/figma-872.svg" alt="" width="17" height="24.7325" style="left:0.0000px;top:0.0000px"></span></button>
+                            <span
+                                class="note">Нужна цена установки обычной ограды</span>
+                        </div>
+                        <h3>Елена Васильевна</h3>
+                        <div class="phone">+7 952 270-47-31</div>
+                        <div class="owner">Отв: <strong>Усович В.О</strong></div>
+
+                        <div class="task highlight hover-only">Позвонить сегодня<br>в 15:40</div>
+                        <div class="card-date"><span class="figma-icon icon-card-calendar" aria-hidden="true" style="width:16.3314px;height:15.3170px"><img src="assets/icons/figma-1109.svg" alt="" width="16.331" height="14.528" style="left:0.0004px;top:0.7890px"><img src="assets/icons/figma-1110.svg" alt="" width="1" height="3.773" style="left:3.9456px;top:0.0000px"><img src="assets/icons/figma-1111.svg" alt="" width="1" height="3.773" style="left:11.4397px;top:0.0000px"><img src="assets/icons/figma-1112.svg" alt="" width="16.331" height="1" style="left:0.0000px;top:4.4622px"><img src="assets/icons/figma-1113.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:6.8391px"><img src="assets/icons/figma-1114.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:6.8391px"><img src="assets/icons/figma-1115.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:11.6704px"><img src="assets/icons/figma-1116.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:11.6704px"><img src="assets/icons/figma-1117.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:11.6704px"><img src="assets/icons/figma-1118.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:9.2547px"><img src="assets/icons/figma-1119.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:9.2547px"><img src="assets/icons/figma-1120.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:9.1903px"></span> <span class="date-value">22.09 </span></div>
+                    </article>
+                </div>
+            </section>
+            <section class="column" data-stage="7" style="--tint:#fff0d9">
+                <header class="column-head"><span class="count">1</span>
+                    <div class="title">Потенциальные:<br>отложенные<br><strong>менее 14 дн.</strong></div><button class="sort" data-sort="7" aria-label="Изменить порядок карточек">↑↓</button></header>
+                <div class="cards">
+                    <article class="card" draggable="true" title="Перетащите карточку в колонку справа или измените её порядок" tabindex="0" role="button" data-id="10" data-city="" data-attention="false" aria-label="Карточка: Василиса Игоревна" style="--accent:#639aff;--shade:#edf3ff">
+                        <div class="card-top"><span><span class="figma-icon icon-document" aria-hidden="true" style="width:30.0000px;height:30.0000px"><img src="assets/icons/figma-809.svg" alt="" width="30" height="30" style="left:0.0000px;top:0.0000px"><img src="assets/icons/figma-810.svg" alt="" width="18.654" height="22.185" style="left:5.5591px;top:3.9073px"><img src="assets/icons/figma-811.svg" alt="" width="6.64761" height="6.64761" style="left:17.3275px;top:4.1456px"><img src="assets/icons/figma-812.svg" alt="" width="10.581" height="6.349" style="left:9.5958px;top:18.8675px"><img src="assets/icons/figma-813.svg" alt="" width="6.107" height="6.106" style="left:11.8324px;top:12.0384px"></span></span></div>
+                        <h3>Василиса Игоревна</h3>
+                        <div class="phone">+7 952 270-47-31</div>
+                        <div class="owner">Отв: <strong>Фирстов О.Е</strong></div>
+
+                        <div class="task highlight hover-only">Вернуться к клиенту<br>12.11</div>
+                        <div class="card-date"><span class="figma-icon icon-card-calendar" aria-hidden="true" style="width:16.3314px;height:15.3170px"><img src="assets/icons/figma-1109.svg" alt="" width="16.331" height="14.528" style="left:0.0004px;top:0.7890px"><img src="assets/icons/figma-1110.svg" alt="" width="1" height="3.773" style="left:3.9456px;top:0.0000px"><img src="assets/icons/figma-1111.svg" alt="" width="1" height="3.773" style="left:11.4397px;top:0.0000px"><img src="assets/icons/figma-1112.svg" alt="" width="16.331" height="1" style="left:0.0000px;top:4.4622px"><img src="assets/icons/figma-1113.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:6.8391px"><img src="assets/icons/figma-1114.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:6.8391px"><img src="assets/icons/figma-1115.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:11.6704px"><img src="assets/icons/figma-1116.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:11.6704px"><img src="assets/icons/figma-1117.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:11.6704px"><img src="assets/icons/figma-1118.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:9.2547px"><img src="assets/icons/figma-1119.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:9.2547px"><img src="assets/icons/figma-1120.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:9.1903px"></span> <span class="date-value">22.09 </span></div>
+                    </article>
+                </div>
+            </section>
+            <section class="column" data-stage="8" style="--tint:#ff825e">
+                <header class="column-head"><span class="count">1</span>
+                    <div class="title">Потенциальные:<br>отложенные<br><strong>более 14 дн.</strong></div><button class="sort" data-sort="8" aria-label="Изменить порядок карточек">↑↓</button></header>
+                <div class="cards">
+                    <article class="card" draggable="true" title="Перетащите карточку в колонку справа или измените её порядок" tabindex="0" role="button" data-id="11" data-city="" data-attention="true" aria-label="Карточка: Елена Васильевна" style="--accent:#ff7013;--shade:#fff5ee">
+                        <div class="card-top"><span><span class="figma-icon icon-document" aria-hidden="true" style="width:30.0000px;height:30.0000px"><img src="assets/icons/figma-809.svg" alt="" width="30" height="30" style="left:0.0000px;top:0.0000px"><img src="assets/icons/figma-810.svg" alt="" width="18.654" height="22.185" style="left:5.5591px;top:3.9073px"><img src="assets/icons/figma-811.svg" alt="" width="6.64761" height="6.64761" style="left:17.3275px;top:4.1456px"><img src="assets/icons/figma-812.svg" alt="" width="10.581" height="6.349" style="left:9.5958px;top:18.8675px"><img src="assets/icons/figma-813.svg" alt="" width="6.107" height="6.106" style="left:11.8324px;top:12.0384px"></span></span><button class="bulb" aria-label="Комментарий"><span class="figma-icon icon-bulb" aria-hidden="true" style="width:17.0000px;height:24.7325px"><img src="assets/icons/figma-871.svg" alt="" width="16" height="23.7324" style="left:0.5000px;top:0.5000px"><img src="assets/icons/figma-872.svg" alt="" width="17" height="24.7325" style="left:0.0000px;top:0.0000px"></span></button>
+                            <span
+                                class="note">Свяжитесь с клиентом</span>
+                        </div>
+                        <h3>Елена Васильевна</h3>
+                        <div class="phone">+7 952 270-47-31</div>
+                        <div class="owner">Отв: <strong>Усович В.О</strong></div>
+
+                        <div class="task highlight hover-only">Просрочка<br>11 дн. 07 ч. 13 мин.</div>
+                        <div class="card-date"><span class="figma-icon icon-card-calendar" aria-hidden="true" style="width:16.3314px;height:15.3170px"><img src="assets/icons/figma-1109.svg" alt="" width="16.331" height="14.528" style="left:0.0004px;top:0.7890px"><img src="assets/icons/figma-1110.svg" alt="" width="1" height="3.773" style="left:3.9456px;top:0.0000px"><img src="assets/icons/figma-1111.svg" alt="" width="1" height="3.773" style="left:11.4397px;top:0.0000px"><img src="assets/icons/figma-1112.svg" alt="" width="16.331" height="1" style="left:0.0000px;top:4.4622px"><img src="assets/icons/figma-1113.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:6.8391px"><img src="assets/icons/figma-1114.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:6.8391px"><img src="assets/icons/figma-1115.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:11.6704px"><img src="assets/icons/figma-1116.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:11.6704px"><img src="assets/icons/figma-1117.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:11.6704px"><img src="assets/icons/figma-1118.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:9.2547px"><img src="assets/icons/figma-1119.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:9.2547px"><img src="assets/icons/figma-1120.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:9.1903px"></span> <span class="date-value">22.09 </span></div>
+                    </article>
+                </div>
+            </section>
+        </section>
+        <p class="empty" id="empty" hidden>Карточки не найдены. Измените поиск или фильтры.</p>
+    </main>
+    <dialog id="client-dialog">
+        <form method="dialog"><button class="close" aria-label="Закрыть">×</button></form>
+        <div id="client-details">
+            <h2 data-detail="name"></h2>
+            <p>
+                <a data-detail="phone"></a>
+            </p>
+            <p>Ответственный: <strong data-detail="owner"></strong></p>
+            <p data-detail="city-row">Город: <span data-detail="city"></span></p>
+            <p data-detail="task"></p>
+            <p data-detail="note"></p>
+            <p>Дата обращения: <span data-detail="date"></span></p>
+        </div>
+    </dialog>
+    <dialog id="add-dialog">
+        <form id="add-form"><button type="button" class="close" id="close-add" aria-label="Закрыть">×</button>
+            <h2>Добавить посетителя</h2><label>Имя<input name="name" required placeholder="Имя клиента"></label><label>Телефон<input name="phone" required type="tel" placeholder="+7"></label><label>Ответственный<input name="owner" value="Усович В.О" required></label>
+            <button class="submit" type="submit">Добавить</button>
+        </form>
+    </dialog>
+    <template id="visitor-template">
+<article class="card" draggable="true" title="Перетащите карточку в колонку справа или измените её порядок" tabindex="0" role="button" data-id="" data-city="" data-attention="false" aria-label="Карточка: " style="--accent:#ff7013;--shade:#fff5ee">
+                        <div class="card-top"><span><span class="figma-icon icon-document" aria-hidden="true" style="width:30.0000px;height:30.0000px"><img src="assets/icons/figma-809.svg" alt="" width="30" height="30" style="left:0.0000px;top:0.0000px"><img src="assets/icons/figma-810.svg" alt="" width="18.654" height="22.185" style="left:5.5591px;top:3.9073px"><img src="assets/icons/figma-811.svg" alt="" width="6.64761" height="6.64761" style="left:17.3275px;top:4.1456px"><img src="assets/icons/figma-812.svg" alt="" width="10.581" height="6.349" style="left:9.5958px;top:18.8675px"><img src="assets/icons/figma-813.svg" alt="" width="6.107" height="6.106" style="left:11.8324px;top:12.0384px"></span></span></div>
+                        <h3></h3>
+                        <div class="phone"></div>
+                        <div class="owner">Отв: <strong></strong></div>
+                        
+                        <div class="task highlight hover-only">Позвонить сегодня<br>в 15:40</div>
+                        <div class="card-date"><span class="figma-icon icon-card-calendar" aria-hidden="true" style="width:16.3314px;height:15.3170px"><img src="assets/icons/figma-1109.svg" alt="" width="16.331" height="14.528" style="left:0.0004px;top:0.7890px"><img src="assets/icons/figma-1110.svg" alt="" width="1" height="3.773" style="left:3.9456px;top:0.0000px"><img src="assets/icons/figma-1111.svg" alt="" width="1" height="3.773" style="left:11.4397px;top:0.0000px"><img src="assets/icons/figma-1112.svg" alt="" width="16.331" height="1" style="left:0.0000px;top:4.4622px"><img src="assets/icons/figma-1113.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:6.8391px"><img src="assets/icons/figma-1114.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:6.8391px"><img src="assets/icons/figma-1115.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:11.6704px"><img src="assets/icons/figma-1116.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:11.6704px"><img src="assets/icons/figma-1117.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:11.6704px"><img src="assets/icons/figma-1118.svg" alt="" width="3.69" height="1" style="left:6.3182px;top:9.2547px"><img src="assets/icons/figma-1119.svg" alt="" width="3.69" height="1" style="left:10.3337px;top:9.2547px"><img src="assets/icons/figma-1120.svg" alt="" width="3.69" height="1" style="left:2.4290px;top:9.1903px"></span> <span class="date-value">22.09 </span></div>
+                    </article>
+    </template>
+    <div class="drop-placeholder" id="drop-placeholder" aria-hidden="true" hidden></div>
+    <script src="app.js"></script>
+</body>
+
+</html>
