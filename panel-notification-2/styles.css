@@ -1,5 +1,7 @@
 :root {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
+    src: local("Inter"), url("Fonts/Inter-Medium.ttf") format("ttf");
+    font-weight: normal;
     color: #414141;
     background: #fff;
     font-size: 14px;
@@ -113,6 +115,7 @@ main {
     border-bottom: 1px solid #999;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 8px;
     flex-wrap: wrap
 }
@@ -250,6 +253,7 @@ b {
 
 .status-filters {
     display: flex;
+    align-items: center;
     gap: 7px
 }
 
@@ -261,23 +265,25 @@ b {
     padding: 9px 48px 9px 15px;
     border-radius: 7px;
     min-width: 194px;
-    line-height: 17px
+    line-height: 17px;
+    height: 100%;
 }
 
 .status-filters b {
     color: #555;
     position: absolute;
     right: 5px;
-    top: 14px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
     min-width: 33px;
-    text-align: center
+    text-align: center;
+    height: 23px;
 }
 
 .filter.active,
 .status-filters .active {
-    box-shadow: inset 0 0 0 2px #ff7013;
-    background: #fff0df;
-    color: #f36b0a
+    box-shadow: inset 0 0 0 1px #333333
 }
 
 .board {
@@ -379,15 +385,20 @@ b {
 .card-top {
     height: 42px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     font-size: 12px
+}
+
+.card-top span:last-child {
+    width: 100%;
 }
 
 .document-icon {
     background: #f0f2f8;
     padding: 2px;
-    color: #3d454d
+    color: #3d454d;
+    margin-right: 10px;
 }
 
 .document-icon svg {
@@ -750,4 +761,235 @@ dialog a {
     height: var(--card-height);
     min-height: var(--card-height);
     flex-shrink: 0;
+}
+
+
+/* Complete SVG icons supplied by the designer. */
+
+.ui-icon {
+    display: inline-block;
+    flex-shrink: 0;
+    vertical-align: middle;
+    object-fit: contain;
+}
+
+.column:not(:last-child) .icon-sort {
+    filter: brightness(0);
+}
+
+.column:last-child .icon-sort {
+    filter: brightness(0) invert(1);
+}
+
+select:focus,
+select:focus-visible {
+    outline: 1px solid #333333;
+    outline-offset: -1px;
+}
+
+.select-icon:focus-within {
+    outline: 1px solid #333333;
+    outline-offset: -1px;
+}
+
+.select-icon select:focus,
+.select-icon select:focus-visible {
+    outline: none;
+}
+
+
+/* Diagonal dropdown arrow matching the reference. */
+
+.toolbar select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("assets/icons/dropdown-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right 9px bottom 9px;
+    background-size: 10px 10px;
+    padding-right: 34px;
+}
+
+
+/* Compact header proportions matching the supplied reference. */
+
+.toolbar {
+    padding: 10px 16px 12px 20px;
+    gap: 8px;
+    justify-content: flex-start;
+}
+
+.toolbar>.heading {
+    flex: 1.25 1 0;
+    min-width: 0;
+    width: auto;
+}
+
+.heading h1 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 3px;
+    white-space: nowrap;
+}
+
+.heading small {
+    font-size: 10px;
+    line-height: 13px;
+}
+
+.toolbar>button,
+.toolbar>select,
+.toolbar>.select-icon {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    height: 45px;
+    font-size: 12px;
+}
+
+.toolbar>button {
+    padding: 0 12px;
+}
+
+.toolbar>.attention {
+    flex-grow: 1.4;
+    gap: 8px;
+    padding: 0 10px;
+    white-space: nowrap;
+}
+
+.toolbar .attention b {
+    padding: 2px 8px;
+}
+
+.toolbar #scope,
+.toolbar .filter,
+.toolbar .no-task {
+    min-width: 0;
+    max-width: none;
+}
+
+.toolbar #scope {
+    padding: 0 18px;
+    background-image: none;
+}
+
+.toolbar>.select-icon {
+    flex-grow: 1.25;
+    padding-left: 10px;
+}
+
+.select-icon select {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 25px;
+}
+
+.toolbar .no-task {
+    padding-left: 12px;
+    padding-right: 43px;
+}
+
+.no-task b {
+    top: 13px;
+    right: 7px;
+    padding: 2px 9px;
+}
+
+@media (max-width: 1100px) {
+    .toolbar>.heading {
+        flex: 1 0 100%;
+    }
+    .toolbar>button,
+    .toolbar>select,
+    .toolbar>.select-icon {
+        flex: 1 0 135px;
+    }
+    .toolbar>.attention {
+        flex-basis: 190px;
+    }
+    .toolbar>.select-icon {
+        flex-basis: 170px;
+    }
+}
+
+@media (min-width: 1101px) {
+    .toolbar {
+        display: grid;
+        grid-template-columns: minmax(0, 1.28fr) minmax(0, 1.42fr) repeat(6, minmax(0, 1fr)) repeat(2, minmax(0, 1.26fr));
+    }
+    .toolbar>.second-row {
+        grid-column: 1 / -1;
+    }
+    .toolbar>button,
+    .toolbar>select,
+    .toolbar>.select-icon {
+        width: 100%;
+    }
+}
+
+.toolbar>.attention {
+    min-width: 0;
+    max-width: none;
+}
+
+
+/* Status buttons share the board's nine-column grid and horizontal edges. */
+
+@media (min-width: 1700px) {
+    .toolbar {
+        padding-left: 22px;
+        padding-right: 14px;
+    }
+    .second-row {
+        display: grid;
+        grid-template-columns: repeat(9, minmax(0, 1fr));
+        column-gap: 8px;
+    }
+    .second-row .search {
+        grid-column: 1 / span 3;
+        width: 100%;
+    }
+    .status-filters {
+        grid-column: 7 / span 3;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+    .status-filters button {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+.search {
+    position: relative;
+}
+
+.search input {
+    min-width: 0;
+    padding-right: 30px;
+}
+
+.search-clear {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    background: transparent;
+    color: #333333;
+    font-size: 24px;
+    line-height: 28px;
+    border-radius: 4px;
+}
+
+.search-clear:hover {
+    background: #f5f7f9;
 }

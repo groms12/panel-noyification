@@ -14,6 +14,7 @@ const ownerOf = card => card.querySelector('.owner strong').textContent;
 const inverted = stage => reverse.has(stage) || document.querySelector('#date').value === 'desc';
 
 function updateBoard() {
+    document.querySelector('#clear-search').hidden = document.querySelector('#search').value.length === 0;
     const query = document.querySelector('#search').value.toLowerCase().replace(/\s/g, '');
     const owner = document.querySelector('#owner').value;
     const city = document.querySelector('#rfo').value;
@@ -166,6 +167,12 @@ function previewDrop(event) {
 }
 
 document.querySelector('#search').addEventListener('input', updateBoard);
+document.querySelector('#clear-search').addEventListener('click', () => {
+    const search = document.querySelector('#search');
+    search.value = '';
+    search.dispatchEvent(new Event('input', { bubbles: true }));
+    search.focus();
+});
 ['scope', 'owner', 'rfo', 'date'].forEach(id => document.getElementById(id).addEventListener('change', () => {
     updateBoard();
     if (id === 'date') saveLayout();
